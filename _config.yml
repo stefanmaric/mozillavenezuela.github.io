@@ -5,18 +5,24 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
+title:               Mozilla Venezuela
+tagline:             'Sitio de la Comunidad Mozilla de Venezuela'
+description:         'Somos un grupo creciente de geek y amantes de las nuevas tecnologias, la idea de tener Mozilla Venezuela, es la de construir un puente con las demas comunidades en los demas paises y llevar un ambiente de buena onda en todos los  ambitos.'
+url:                 http://mozillavenezuela.org
 baseurl:             ''
 paginate:            5
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Mozilla Venezuela
+  url:               https://twitter.com/mozillave
+  email:             info@mozillavenezuela.org
 
 # Custom vars
-version:             1.0.0
+version:             0.0.1
+
+# Writting
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: pygments
