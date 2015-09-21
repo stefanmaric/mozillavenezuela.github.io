@@ -5,42 +5,40 @@
 
   <body>
 
-    <div id="tabzilla">
-      <a href="https://www.mozilla.org/">Mozilla</a>
+    <div class="navigation-wrapper container clearfix">
+      {% include dropbar.html %}
     </div>
 
-    {% include sidebar.html %}
-
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+    <!-- Wrap is the content to shift when toggling the dropbar. We wrap the
          content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
       <div class="masthead">
         <div class="container">
-          <h3 class="masthead-title">
+          <h1 class="masthead-title large">
             <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
+          </h1>
+          <h2>{{ site.tagline }}</h2>
         </div>
       </div>
 
-      <div class="container content">
-        {{ content }}
+      <div class="content">
+        <div class="container">
+          {{ content }}
+        </div>
       </div>
     </div>
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
     <script>
       (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
+        var toggle = document.querySelector('.dropbar-toggle');
+        var dropbar = document.querySelector('#dropbar');
+        var checkbox = document.querySelector('#dropbar-checkbox');
 
         document.addEventListener('click', function(e) {
           var target = e.target;
 
           if(!checkbox.checked ||
-             sidebar.contains(target) ||
+             dropbar.contains(target) ||
              (target === checkbox || target === toggle)) return;
 
           checkbox.checked = false;
