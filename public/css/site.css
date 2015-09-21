@@ -1,11 +1,22 @@
-html {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-}
+/*
+ * Mozilla Venezuela main styles
+ * Following Mozilla's Sandstone Style Guide
+ * https://www.mozilla.org/en-US/styleguide/
+ */
 
 body {
   background-color: #F6F4EC;
   background-image: linear-gradient(to bottom, #D7D3C8, #F6F4EC);
   border-top: 2px solid #FFF;
+}
+
+/*
+  Typography basics
+  See: https://www.mozilla.org/en-US/styleguide/websites/sandstone/typefaces/
+ */
+
+html {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, .large {
@@ -47,6 +58,20 @@ h4 {
 
 .pagination, .sidebar {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+/*
+  Links
+  See: https://www.mozilla.org/en-US/styleguide/websites/sandstone/colors/
+ */
+
+a {
+  color: #0095DD;
+}
+
+a:hover,
+a:active {
+  color: #00539F
 }
 
 /*
