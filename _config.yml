@@ -8,8 +8,8 @@ relative_permalinks: true
 title:               Mozilla Venezuela
 tagline:             'Sitio de la Comunidad Mozilla de Venezuela'
 description:         'Somos un grupo creciente de geek y amantes de las nuevas tecnologias, la idea de tener Mozilla Venezuela, es la de construir un puente con las demas comunidades en los demas paises y llevar un ambiente de buena onda en todos los  ambitos.'
-url:                 http://mozillavenezuela.org
-baseurl:             'http://stefanmaric.com/mozillavenezuela.github.io/'
+url:                 'http://stefanmaric.com'
+baseurl:             '/mozillavenezuela.github.io'
 paginate:            5
 
 # About/contact
