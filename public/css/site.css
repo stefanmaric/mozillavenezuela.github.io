@@ -80,6 +80,7 @@ a:active {
   position: relative;
 }
 
+/* dropbar will take all available horizontal space when collapsed */
 @media (max-width: 37.99em) {
   .navigation-wrapper {
     max-width: 100%;
@@ -90,7 +91,8 @@ a:active {
 
 .dropbar-toggle {
   display: none;
-  font-size: 2.25rem;
+  /* fixed to match tabzilla's height */
+  font-size: 37px;
   line-height: 1;
   float: left;
   text-transform: lowercase;
@@ -101,7 +103,7 @@ a:active {
 .dropbar-toggle span {
   display: inline-block;
   vertical-align: top;
-  background-color: #fff;
+  background-color: #FFF;
 }
 
 .dropbar-toggle span small {
@@ -127,7 +129,7 @@ a:active {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGBAMAAACDAP+3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wkVBBw18qbwJAAAACFQTFRFAAAAjJmm0NDQzdHR+/v71NTU/////v///////f7+////0SdugAAAAAp0Uk5TABQmQkRzf6rN8GDg5ZIAAAABYktHRApo0PRWAAAA3UlEQVRIx43RzQ0BURTF8VPCK0EJr4TRgajgmQpExBpRAJGwZZgvVdqwMF7mf876l3Nv7tULUwrJQjKIDAJmLzRPoekCmyQ0n0ljpo9sdkLzXXjMVGIT2dRik9j0gc1TbJaGmbBpxeZhmK1hZoYJbDqxaQxTGWZrmGSYyKYXm8YwD8McDZMME9kMvpU1jWHuhlkapmAz/ETO1Ia5GSYZJrD5u2DGHA1TsOnEpjJMYpMbNTQnw0Q2tdjM2ORrZNT8mLPQtIFNEpqV0ByEZi0yfSkylygw17nG022mIPQG8SSnvibhvI8AAAAASUVORK5CYII=");
 }
 
-
+/* hidden checkbox, used for sibling CSS selector */
 #dropbar-checkbox {
   position: absolute;
   z-index: -1;
@@ -144,23 +146,25 @@ a:active {
   #dropbar-checkbox:focus ~ .dropbar,
   #dropbar-checkbox:checked ~ .dropbar {
     max-height: 25rem;
-    max-height: 100vh;
   }
 }
 
 .dropbar-nav-item {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 @media (min-width: 38em) {
   .dropbar {
+    /* next to tabzilla */
     position: absolute;
-    right: 9em;
+    /* tabzilla width (147px) + 16px margin */
+    right: 163px;
   }
   .dropbar-nav-item {
-    font-size: .65rem;
+    /* fixed to match mozilla.org style */
+    font-size: 13px;
     line-height: 3em;
     padding: 0 1em;
   }
@@ -170,7 +174,7 @@ a:active {
   .dropbar {
     overflow: hidden;
     max-height: 0;
-    background-color: #fff;
+    background-color: #FFF;
     transition: 450ms all cubic-bezier(.55, 0, .1, 1) 0s;
   }
   .dropbar-nav {
@@ -209,4 +213,8 @@ a:active {
 }
 .clearfix:after {
   clear: both;
+}
+
+* {
+  transition: 250ms all cubic-bezier(.55, 0, .1, 1) 0s;
 }
